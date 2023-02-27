@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+.title,
+.subtitle {
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+}
+
+.practice-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  background-color: azure;
+}
+
+/* HAMBURGER MENU CONTAINERS */
+/* ************************* */
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 150px;
+  height: 150px;
+
+  background-color: gray;
+  padding: 10px 20px;
+
+  position: relative;
+}
+
+.hamburger-menu--simple {
+  background-color: lightseagreen;
+}
+.hamburger-menu--left-arrow {
+  background-color: lightcoral;
+}
+.hamburger-menu--right-arrow {
+  background-color: lightblue;
+}
+.hamburger-menu--compress {
+  background-color: lightsteelblue;
+}
+.hamburger-menu--rotate90 {
+  background-color: lightgreen;
+}
+.hamburger-menu--plus {
+  background-color: lightsalmon;
+}
+
+/* HAMBURGER MENU DESIGN */
+/* ********************* */
+
+.menu-shape {
+  position: absolute;
+  bottom: 50px;
+}
+
+.menu-shape::before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+}
+
+.menu-shape::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+}
+
+.menu-shape,
+.menu-shape::before,
+.menu-shape::after {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+/* MENU SIMPLE */
+/* *********** */
+
+.hamburger-menu--simple:hover .menu-shape--simple {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.hamburger-menu--simple:hover .menu-shape--simple::after {
+  transform: rotate(45deg);
+  transform-origin: center right;
+}
+
+.hamburger-menu--simple:hover .menu-shape--simple::before {
+  transform: rotate(-45deg) translate(2px, -3px);
+  transform-origin: center right;
+}
+
+.menu-shape--simple {
+  transition: background-color 0.5s;
+}
+
+.menu-shape--simple::after,
+.menu-shape--simple::before {
+  transition: transform 0.5s, transform-origin 0.5s;
+}
+
+/* MENU LEFT ARROW */
+/* *************** */
+
+.hamburger-menu--left-arrow:hover .menu-shape--left-arrow::after {
+  transform: rotate(45deg) scaleX(0.7) translate(-13px, 4px);
+}
+
+.hamburger-menu--left-arrow:hover .menu-shape--left-arrow::before {
+  transform: rotate(-45deg) scaleX(0.7) translate(-13px, -4px);
+}
+
+.menu-shape--left-arrow::after,
+.menu-shape--left-arrow::before {
+  transition: transform 0.5s;
+}
+
+/* MENU RIGHT ARROW */
+/* **************** */
+
+.hamburger-menu--right-arrow:hover .menu-shape--right-arrow::after {
+  transform: rotate(-45deg) scaleX(0.7) translate(15px, 5px);
+}
+
+.hamburger-menu--right-arrow:hover .menu-shape--right-arrow::before {
+  transform: rotate(45deg) scaleX(0.7) translate(15px, -5px);
+}
+
+.menu-shape--right-arrow::after,
+.menu-shape--right-arrow::before {
+  transition: transform 0.5s;
+}
+
+/* MENU COMPRESS */
+/* ************* */
+
+.hamburger-menu--compress:hover .menu-shape--compress::after {
+  transform: translateY(-12px);
+}
+
+.hamburger-menu--compress:hover .menu-shape--compress::before {
+  transform: translateY(12px);
+}
+
+.menu-shape--compress::after,
+.menu-shape--compress::before {
+  transition: transform 0.3s;
+}
+
+/* MENU ROTATE 90 */
+/* ************** */
+
+.hamburger-menu--rotate90:hover .menu-shape--rotate90 {
+  transform: rotate(90deg);
+}
+
+.menu-shape--rotate90 {
+  transition: transform 0.2s;
+}
+
+/* MENU PLUS */
+/* ********* */
+
+.hamburger-menu--plus:hover .menu-shape--plus {
+  background-color: transparent;
+}
+
+.hamburger-menu--plus:hover .menu-shape--plus::after {
+  transform: rotateZ(90deg) translateX(-12px);
+}
+
+.hamburger-menu--plus:hover .menu-shape--plus::before {
+  transform: translateY(12px);
+}
+
+.menu-shape--plus {
+  transition: background-color 0.2s;
+}
+
+.menu-shape--plus::after,
+.menu-shape--plus::before {
+  transition: transform 0.3s;
+}
