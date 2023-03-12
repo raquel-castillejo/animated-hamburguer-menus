@@ -1,4 +1,5 @@
-# Práctica de animaciones CSS
+# Menús hamburguesa animados
+## Práctica de animaciones CSS
 
 ![Imagen del proyecto](https://github.com/raquel-castillejo/018-transform-hamburger-menus/blob/main/COVER.png)
 
